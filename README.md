@@ -72,3 +72,27 @@ bootcamp-week-4/
 ├── package.json
 ├── package-lock.json
 └── vite.config.js
+```
+
+## Menjalankan Project di Komputer
+
+Pastikan Node.js sudah terpasang, kemudian buka terminal pada folder project.
+
+Install seluruh package yang dibutuhkan:
+
+```text
+npm install
+```
+
+Setelah proses instalasi selesai, jalankan server pengembangan:
+
+```text
+npm run dev
+```
+
+Vite kemudian akan memberikan alamat lokal pada terminal. Buka alamat tersebut
+menggunakan browser, contohnya:
+
+```text
+http://localhost:5173/
+```
