@@ -1,0 +1,24 @@
+import { useState } from "react";
+import Header from "./Header";
+
+export default function Card({ imgSrc, title, author, desc }) {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className="flex flex-col justify-center items-center shadow-lg rounded-2xl gap-4 hover:rotate-1 transition-transform duration-300 cursor-pointer">
+      <img className="size-90 rounded-t-lg" src={imgSrc} alt="Currents" />
+
+      <div className="w-full flex flex-col gap-2 px-4 py-2 min-w-0">
+        <Header text={title} />
+
+        <span>{author}</span>
+
+        <p className={`max-w-[40ch] ${show ? "" : "truncate"}`}>{desc}</p>
+
+        <button onClick={() => setShow((prev) => !prev)}>
+          {show ? "Hide Details" : "Show Details"}
+        </button>
+      </div>
+    </div>
+  );
+}
